@@ -1,0 +1,19 @@
+server:
+  port: 80
+eureka:
+  client:
+    register-with-eureka: false
+    service-url:
+      defaultZone: http://eureka7001.com:7001/eureka, http://eureka7002.com:7002/eureka
+
+ribbon:
+  # 建立连接时间5秒
+  ReadTimeout:  5000
+  # 超时时间
+  ConnectTimeout: 5000
+
+logging:
+  level:
+    cn.tellsea.springcloud.service.PaymentFeignService: debug
+
+
